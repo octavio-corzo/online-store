@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 import { useCategoryStore } from './store/category';
 import { useUserStore } from './store/user';
 
@@ -11,15 +10,15 @@ userStore.getUsers();
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <v-layout>
+    <v-app-bar></v-app-bar>
+    <v-navigation-drawer></v-navigation-drawer>
+    <v-main>
+      <v-container>
+        <router-view />
+      </v-container>
+    </v-main>
+  </v-layout>
 </template>
 
 <style scoped>

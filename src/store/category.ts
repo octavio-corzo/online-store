@@ -7,13 +7,13 @@ const API = 'http://localhost:8080/api/';
 export const useCategoryStore = defineStore({
     id: "category",
     state: () => ({
-        categories: [] as Category[]
+        categories: [] as Category[],
     }),
     actions: {
         async getCategories(): Promise<void>{
             try {
                 axios.get<Categories>(`${API}category/`).then( (response) => {
-                    this.categories = response.data.categories
+                    this.categories = response.data.categories[0];
                     console.log(response.data);
                 })
             } catch (error) {

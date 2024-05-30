@@ -1,5 +1,6 @@
 export interface Users {
-    users: User[]
+    msg: string;
+    users: User[][];
 };
 
 export interface User {

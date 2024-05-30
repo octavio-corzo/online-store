@@ -1,6 +1,7 @@
 
 export interface Categories {
-    categories: Category[]
+    msg: string;
+    categories: Category[][];
 };
 
 
@@ -10,4 +11,5 @@ export interface Category {
     status:   boolean;
     user:     string;
     products: string[];
+    totalProducts: number;
 };
